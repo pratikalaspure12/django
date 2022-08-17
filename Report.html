@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <br><br>
+            <h2 class="display-4">Workers Report</h2>
+            <hr>
+            <table class="table table-bordered table-hover">
+                <tr style="background-color:rgb(145, 199, 201)">
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Post</th>
+                    <th>Salary</th>
+                </tr>
+
+                {% for rec in list %}
+                <tr>
+                    {% for col in rec %}
+                    <td>{{col}}</td>
+                    {%endfor%}
+                </tr>
+                {%endfor%}
+
+            </table>
+
+            <br><br>
+            <a href="/worker/">Home</a>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <br><br>
+            <h2 class="display-4">Account Report</h2>
+            for User : {{user}}
+            <hr>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Balance</th>
+                </tr>
+
+                {% for rec in acclist %}
+                <tr>
+                    {% for val in rec %}
+                    <td>{{val}}</td>
+                    {%endfor%}
+                </tr>
+                {%endfor%}
+
+            </table>
+
+        </div>
+
+    </body>
+</html>
